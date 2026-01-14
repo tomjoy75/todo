@@ -10,9 +10,9 @@ Système de gestion ultra-simple de tâches et projets, pensé pour :
 
 Ce repo contient uniquement des fichiers texte :
 
-repo/notes/
-├── todo.md # Vue active (NOW / ROUTINE / AUTRES)
-├── backlog.md # Mémoire / parking / projets futurs
+repo/notes/ \
+├── todo.md        # Vue active (NOW / ROUTINE / AUTRES) \
+├── backlog.md     # Mémoire / parking / projets futurs \
 └── README.md
 
 
