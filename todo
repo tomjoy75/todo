@@ -1,0 +1,53 @@
+#!/bin/bash
+
+NOTES_DIR="$HOME/.notes"
+
+TODO_FILE="$NOTES_DIR/todo.md"
+BACKLOG_FILE="$NOTES_DIR/backlog.md"
+
+usage() {
+  cat << EOF
+Usage: todo [option]
+
+Sans option :
+  todo            Affiche todo.md
+
+Options :
+  -e,  --edit         Éditer todo.md
+  -b,  --backlog      Afficher backlog.md
+  -be, --backlog-edit Éditer backlog.md
+  -p,  --pull         Synchroniser (git pull)
+  -P,  --push         Sauvegarder (git push)
+  -h,  --help         Afficher cette aide
+EOF
+}
+
+case "$1" in
+  "" )
+    less "$TODO_FILE"
+    ;;
+  -e|--edit )
+    vim "$TODO_FILE"
+    ;;
+  -b|--backlog )
+    less "$BACKLOG_FILE"
+    ;;
+  -be|--backlog-edit )
+    vim "$BACKLOG_FILE"
+    ;;
+  -p|--pull )
+    (cd "$NOTES_DIR" && git pull)
+    ;;
+  -P|--push )
+    (cd "$NOTES_DIR" && git add . && git commit -m "update" && git push)
+    ;;
+  -h|--help )
+    usage
+    ;;
+  * )
+    echo "Option inconnue."
+    usage
+    exit 1
+    ;;
+esac
+
