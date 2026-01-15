@@ -1,5 +1,9 @@
 # PROJETS EN PARKING
 
+- Typing OverRide
+  - txt file avec commandes type reverse engineering
+  - implementation dans logiciel(typing tutor, ...)
+
 - App ToDo List
   - outil stabilisé (todo.md)
   - extension possible : synchro (Google Drive)
