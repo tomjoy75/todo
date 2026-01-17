@@ -1,5 +1,10 @@
 # PROJETS EN PARKING
 
+- Linkedin Projects
+  - Maj of linkedin profile with several projects I did
+  - Duplicate in github
+  - Change also the profile page of Github
+
 - Typing OverRide
   - txt file avec commandes type reverse engineering
   - implementation dans logiciel(typing tutor, ...)
